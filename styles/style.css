@@ -1,9 +1,18 @@
+/*font*/
+body {
+  background-color: var(--background-col);
+  color: var(--light-text);
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+
 /*Grid layout*/
 
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  gap: 15px;
 }
 
 .header {
@@ -17,8 +26,214 @@
   grid-column: 1/3;
   display: grid;
   grid-template-columns: 4fr 1fr 1fr 2fr;
+  padding: 5px;
+  gap: 5px;
+}
+
+.menu-big {
+  display: grid;
+  gap: 5px;
+}
+
+.menu-small {
+  display: grid;
+  gap: 5px;
+}
+
+.user-info {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.user-name-nick {
+  grid-column: 2/4;
 }
 
 .sidebar {
   grid-row: 1/3;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr 5fr;
+  gap: 20px;
+  padding: 5px;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dashboard p {
+  font-weight: 500;
+  font-size: larger;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 15px;
+  gap: 15px;
+}
+
+.your-projects {
+  grid-column: 1/2;
+}
+
+.announcements-headline {
+  grid-column: 2/3;
+}
+
+.projects {
+  grid-row: 2/4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.trending {
+  grid-column: 2/3;
+}
+
+
+
+
+/*Colors*/
+.sidebar {
+  background-color: #ccfbf1;
+}
+
+.projects .card {
+  border: 0.5px solid black;
+}
+
+.main-content {
+ background-color: #f1f5f9;
+}
+
+.projects .card {
+  border: 0.5px solid black;
+}
+
+.menu-big, .menu-small {
+  padding: 5px;
+}
+
+
+
+.menu-big a, .menu-small a {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  color: var(--light-text);
+  padding-left:  30px;
+  text-decoration: none;
+}
+
+.menu-big a:hover, .menu-small a:hover{
+  color: var(--hover-link);
+}
+
+
+
+/*pictures*/
+
+#alerts {
+  background-image: url(../img/bell-ring-outline.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  height: 24px;
+  width: 24px;
+}
+
+#dashboard {
+  background-image: url(../img/view-dashboard.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  height: 50px;
+  width: 50px;
+}
+
+
+#home {
+  background-image: url(../img/home.svg);
+
+}
+
+#home:hover {
+  color: blueviolet;
+  background-image: url(../img/home-h.svg);
+}
+
+
+#profile {
+  background-image: url(../img/profile.svg);
+
+}
+
+#profile:hover {
+  color: blueviolet;
+  background-image: url(../img/profile-h.svg);
+}
+
+#messages {
+  background-image: url(../img/messages.svg);
+
+}
+
+#messages:hover {
+  color: blueviolet;
+  background-image: url(../img/messages-h.svg);
+}
+
+#tasks {
+  background-image: url(../img/tasks.svg);
+
+}
+
+#tasks:hover {
+  color: blueviolet;
+  background-image: url(../img/tasks-h.svg);
+}
+
+#communities {
+  background-image: url(../img/community.svg);
+}
+
+#communities:hover {
+  color: blueviolet;
+  background-image: url(../img/community-h.svg);
+}
+
+#settings {
+  background-image: url(../img/settings.svg);
+
+}
+
+#settings:hover {
+  color: blueviolet;
+  background-image: url(../img/settings-h.svg);
+}
+
+#support {
+  background-image: url(../img/support.svg);
+
+}
+
+#support:hover {
+  color: blueviolet;
+  background-image: url(../img/support-h.svg);
+}
+
+#privacy {
+  background-image: url(../img/privacy.svg);
+
+}
+
+#privacy:hover {
+  color: blueviolet;
+  background-image: url(../img/privacy-h.svg);
 }
